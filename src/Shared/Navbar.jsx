@@ -1,5 +1,17 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
-    
+  const navLinks = (
+    <>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="aboutUs">About Us</Link>
+      </li>
+    </>
+  );
+
   return (
     <>
       <div className="navbar bg-base-100">
@@ -25,6 +37,7 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
+              {navLinks}
               {/* <li>
                 <a>Item 1</a>
               </li>
@@ -44,10 +57,11 @@ const Navbar = () => {
               </li> */}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <p className="text-2xl">Charitable</p>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
+            {navLinks}
             {/* <li>
               <a>Item 1</a>
             </li>
